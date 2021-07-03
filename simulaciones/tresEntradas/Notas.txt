@@ -1,0 +1,13 @@
+Controlador Inicial
+
+posAngv2unicamf
+
+Parametros
+
+d0 = 0.1
+dtol = 0.01
+
+Resultado
+
+iteraciones = 15
+posAngv2Opti

@@ -1,0 +1,13 @@
+Controlador Inicial
+
+posicion8unicamf
+
+Parametros
+
+dtol = 0.001
+d0 = 0.5
+
+Resultados
+
+iteraciones = 9
+optipos3h
