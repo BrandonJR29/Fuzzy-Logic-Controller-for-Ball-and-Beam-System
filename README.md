@@ -1,52 +1,48 @@
-# Control-Difuso-para-Sistema-Ball-and-Beam
+# Fuzzy Logic Controller for the Quanser's Ball and Beam System
 
-Implementación y simulación de controladores difusos en el sistema Ball and Beam de Quanser.
+Implementation and simulation of fuzzy logic controllers for the ball and beam system of Quanser.
 
-Los controladores difusos fueron diseñados y optimizados por el método de patrón de búsqueda
-implementado en Matlab y Simulink mediante un proceso iterativo.
+The fuzzy logic controllers were designed and optimized using patern search method (iterative method) implemented in Matlab and Simulink.
 
-La implementación se llevo a cabo usando el microcontrolador ESP32, usando la librería de lógica
-difusa [eFFL](https://github.com/zerokol/eFLL) modificada para poder usar la función unica propuesta
-en este trabajo.
+The controllers were embedded in a ESP32 microcontroller, using a library for fuzzy logic [eFFL](https://github.com/zerokol/eFLL) using a custom membership function designed in this project.
 
-Para obtener más información acerca del sistema Ball and Beam de Quanser, hardware implementado o del firmware
-se puede observar con mayor detalle en este [documento](./tomo)
+If you want to know more details about the implementation, theory or any deatils please consult the [document](./tomo) (It is in spanish).
 
 ## Demo
 
-Si desea ver como se obtuvieron los resultados, puede verlos en este [enlace](https://www.youtube.com/watch?v=K9Vu6w_IInE&list=PL-Z_5Zx_UY59NFn0tXmD-8x4Mgz_DTYgh)
+The test videos are in this [link](https://www.youtube.com/watch?v=K9Vu6w_IInE&list=PL-Z_5Zx_UY59NFn0tXmD-8x4Mgz_DTYgh)
 
-## Esquema del sistema de control
+## Block diagram of the controll system
 
 ![esquema-de-control](./imagenes/esquema.png)
 
-## Topologias de control
+## Control Topology.
 
-### Doble lazo
+### Double loop.
 
 ![doble-lazo](./imagenes/dobleLazo.png)
 
-### Controlador Difuso con tres entradas
+### Fuzzy Logic controller with three inputs.
 
 ![tres-entradas](./imagenes/tresEntradas.png)
 
-## Resultado de simulación
+## Simulation results.
 
-| Controlador | PD | Difuso |
+| Controller | PD | Fuzzy |
 | ------ | ------ | ------- |
-| Tiempo de establecimiento [s] | 2.3404 | 1.6107 |
-| Tiempo de alza [s] | 0.6812 | 1.1030 |
-| Sobre pico [%] | 12.0648 | 0.9372 |
+| Settling time [s] | 2.3404 | 1.6107 |
+| Rise time [s] | 0.6812 | 1.1030 |
+| Overshoot [%] | 12.0648 | 0.9372 |
 
 ![resultado-simulacion](./imagenes/simulacion.png)
 
-## Resultado de implementación.
+## Implementation results.
 
-| Controlador | PD | Difuso |
+| Controller | PD | Fuzzy |
 | ------ | ------ | ------- |
-| Tiempo de establecimiento [s] | 2.3618 | 1.9159 |
-| Tiempo de alza [s] | 0.7576 | 1.4304 |
-| Sobre pico [%] | 12.5931 | 0 |
+| Settling time [s] | 2.3618 | 1.9159 |
+| Rise time [s] | 0.7576 | 1.4304 |
+| Overshoot [%] | 12.5931 | 0 |
 
 ![resultado-implementación](./imagenes/resultadoFinal.png)
 
